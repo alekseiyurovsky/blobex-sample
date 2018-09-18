@@ -1,0 +1,42 @@
+*,
+*:before,
+:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.input {
+  vertical-align: middle;
+  margin-left: 15px;
+  padding-left: 15px;
+  height: 35px;
+  border: solid 1px #aaaaaa;
+  border-radius: 3px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn {
+  width: 150px;
+  height: 35px;
+  box-shadow: 0 3px 21px rgba(0, 0, 0, 0.18);
+  background-color: $bg-color-btn;
+  color: $text-color-white;
+  font-size: 14px;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:disabled {
+    background-color: $bg-color-btn-disabled;
+  }
+}

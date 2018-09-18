@@ -1,0 +1,35 @@
+@import "src/scss/mixins.scss";
+@import "src/scss/variables.scss";
+
+.content {
+
+  &-container {
+    @include container-style;
+  }
+}
+
+.data-choice {
+
+  &-row {
+    padding: 0 20px;
+    text-align: left;
+    height: 50px;
+
+    &:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle;
+    }
+  }
+
+  &-radio {
+    vertical-align: middle;
+    margin: 3px 3px 3px 5px;
+  }
+
+  &-text {
+    vertical-align: middle;
+    padding-left: 10px;
+  }
+}

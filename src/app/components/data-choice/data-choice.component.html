@@ -1,0 +1,46 @@
+<div class="content-container">
+
+  <div class="data-title">Please choose data source</div>
+
+  <div class="data-choice-row">
+
+    <input class="data-choice-radio"
+           type="radio"
+           value="local"
+           name="data-choice"
+           [(ngModel)]="dataChoice">
+
+    <span class="data-choice-text">
+      Will load data from data.json
+    </span>
+
+  </div>
+
+  <div class="data-choice-row">
+
+    <input class="data-choice-radio"
+           type="radio"
+           value="url"
+           name="data-choice"
+           [(ngModel)]="dataChoice">
+
+    <input class="input"
+           type="text"
+           name="url"
+           placeholder="Provide url to download"
+           [disabled]="dataChoice !== 'url'"
+           [(ngModel)]="urlString">
+
+  </div>
+
+  <div class="data-choice-row">
+
+    <button class="btn" [disabled]="isButtonDisabled()">
+      Load
+    </button>
+
+  </div>
+
+</div>
+
+

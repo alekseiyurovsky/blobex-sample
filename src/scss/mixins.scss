@@ -1,0 +1,36 @@
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-large {
+  @media (max-width: $mobile-large) {
+    @content;
+  }
+}
+
+@mixin tablet-small {
+  @media (max-width: $tablet-small) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin desktop-small {
+  @media (max-width: $desktop-small) {
+    @content;
+  }
+}
+
+@mixin container-style {
+  background-color: $bg-color-form;
+  border-radius: 10px;
+  padding: 15px 0;
+  box-shadow: 3px 3px 20px 0px rgba(0,0,0,0.75);
+}

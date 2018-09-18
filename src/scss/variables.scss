@@ -1,0 +1,25 @@
+//============ Sizes =========
+
+$mobile: 660px;
+$mobile-large: 710px;
+$tablet-small: 768px;
+$tablet: 975px;
+$desktop-small: 1200px;
+
+$mobile-large-min: $mobile+1;
+$tablet-small-min: $mobile-large+1;
+$tablet-min: $tablet-small+1;
+$desktop-small-min: $tablet+1;
+
+//============ Backgrounds =========
+
+$bg-color: #0c6877;
+$bg-color-form: #fafafa;
+$bg-color-btn: #00882d;
+$bg-color-btn-disabled: #333333;
+
+
+//============ Texts =========
+
+$text-color-white: #ffffff;
+
