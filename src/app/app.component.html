@@ -1,14 +1,8 @@
 <div class="content">
 
-  <span *ngIf="state === 'start'"
-        (click)="toggleDataChoice()">
-
-    <div class="content-icon"></div>
-    <span class="content-title">Blobex Corporation</span>
-
-  </span>
-
-  <app-data-choice  *ngIf="state === 'data-choice'"></app-data-choice>
+    <app-data-choice  *ngIf="state === 'data-choice'"></app-data-choice>
+    <app-widget  *ngIf="state === 'widgets'"></app-widget>
+    <app-active-widget *ngIf="state === 'active-widget'"></app-active-widget>
 
 </div>
 

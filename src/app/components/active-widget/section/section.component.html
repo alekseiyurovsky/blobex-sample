@@ -1,0 +1,16 @@
+<div class="section clearfix" [ngClass]="{'half':section.columns === 2}">
+
+    <div class="section-header">{{section.header}}</div>
+
+    <div class="section-input" *ngFor="let sectionInput of section.items; let inputIndex = index">
+
+        <app-input [sectionInput]="sectionInput"
+                   [form]="form"
+                   [sectionIndex]="sectionIndex"
+                   [inputIndex]="inputIndex">
+
+        </app-input>
+
+    </div>
+
+</div>

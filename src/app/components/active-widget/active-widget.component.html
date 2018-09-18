@@ -1,0 +1,28 @@
+<div class="widget-container"
+     [ngSwitch]="widget.type">
+
+    <form *ngSwitchCase="'form'"
+          [formGroup]="form"
+          #widgetForm>
+
+        <div class="widget-header">
+            <div class="widget-header-text red" (click)="cancel()">Cancel</div>
+            <div class="widget-header-text title">{{widget.name}}</div>
+            <div class="widget-header-text" (click)="save()">Save</div>
+        </div>
+
+        <div *ngFor="let section of widget.items; let sectionIndex = index">
+            <app-section [form]="form"
+                         [section]="section"
+                         [sectionIndex]="sectionIndex">
+
+            </app-section>
+        </div>
+
+    </form>
+
+    <div *ngSwitchDefault>
+        <!--other business logic goes here-->
+    </div>
+
+</div>

@@ -4,6 +4,7 @@
 .content {
 
   &-container {
+    padding: 15px 0;
     @include container-style;
   }
 }

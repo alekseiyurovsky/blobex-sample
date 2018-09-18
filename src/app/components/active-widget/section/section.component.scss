@@ -1,0 +1,27 @@
+@import "src/scss/variables";
+
+.section {
+
+  &-header {
+    height: 40px;
+    line-height: 40px;
+    background-color: $bg-color-section;
+    padding-left: 15px;
+    border-top: solid 1px $border-color-grey;
+    border-bottom: solid 1px $border-color-grey;
+    font-weight: 700;
+    text-align: left;
+    color: $text-color-green;
+  }
+
+  &-input {
+    display: inline-block;
+    padding-top: 20px;
+    width: 100%;
+
+    .section.half & {
+      width: 50%;
+      float: left;
+    }
+  }
+}

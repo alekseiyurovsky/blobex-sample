@@ -1,0 +1,16 @@
+<div [ngSwitch]="sectionInput.type"
+     [formGroup]="form">
+
+    <input *ngSwitchCase="'input'"
+           [formControlName]="sectionIndex+'-'+inputIndex+'-'+sectionInput.type"/>
+
+
+    <input *ngSwitchCase="'currency'"
+           [formControlName]="sectionIndex+'-'+inputIndex+'-'+sectionInput.type"/>
+
+
+    <div *ngSwitchDefault>
+        <!--other business logic goes here-->
+    </div>
+
+</div>

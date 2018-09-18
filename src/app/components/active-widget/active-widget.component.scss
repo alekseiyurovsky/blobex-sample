@@ -1,0 +1,32 @@
+@import "src/scss/mixins.scss";
+@import "src/scss/variables";
+
+
+.widget {
+
+  &-container {
+    max-height: 700px;
+    padding-bottom: 20px;
+    @include container-style;
+  }
+
+  &-header {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-text {
+      padding: 0 15px;
+      color: $text-color-green;
+
+      &.red {
+        color: $text-color-red;
+      }
+
+      &.title {
+        font-weight: 700;
+      }
+    }
+  }
+}

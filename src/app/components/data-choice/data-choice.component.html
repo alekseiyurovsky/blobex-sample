@@ -5,14 +5,16 @@
   <div class="data-choice-row">
 
     <input class="data-choice-radio"
+           id="data-local"
            type="radio"
            value="local"
            name="data-choice"
            [(ngModel)]="dataChoice">
 
-    <span class="data-choice-text">
-      Will load data from data.json
-    </span>
+    <label for="data-local"
+           class="data-choice-text">
+      Load local data from data.json
+    </label>
 
   </div>
 
@@ -35,7 +37,9 @@
 
   <div class="data-choice-row">
 
-    <button class="btn" [disabled]="isButtonDisabled()">
+    <button class="btn"
+            (click)="loadData()"
+            [disabled]="isButtonDisabled()">
       Load
     </button>
 

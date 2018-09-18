@@ -2,27 +2,23 @@ import {Component, OnInit} from '@angular/core';
 import {DataService} from './services/data/data.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
 
-  state: string;
+    state: string;
 
-  constructor(private dataService: DataService) {
-  }
+    constructor(private dataService: DataService) {
+    }
 
-  // app entry point
-  ngOnInit() {
-    this.dataService.appState.subscribe(
-      value => {
-        this.state = value;
-      }
-    );
-  }
-
-  toggleDataChoice() {
-    this.dataService.appState.next('data-choice');
-  }
+    // app entry point
+    ngOnInit() {
+        this.dataService.appState.subscribe(
+            value => {
+                this.state = value;
+            }
+        );
+    }
 }
