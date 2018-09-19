@@ -9,6 +9,8 @@ import { FormGroup} from "@angular/forms";
 })
 export class InputComponent implements OnInit {
 
+    name: string;
+
     @Input() sectionInput: SectionInput;
     @Input() form: FormGroup;
     @Input() sectionIndex: number;
@@ -16,6 +18,7 @@ export class InputComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
+        this.name = `${this.sectionIndex}-${this.inputIndex}-${this.sectionInput.type}`;
     }
 
 }

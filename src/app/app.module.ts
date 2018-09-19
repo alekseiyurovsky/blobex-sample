@@ -10,6 +10,8 @@ import { WidgetComponent } from './components/widget/widget.component';
 import { ActiveWidgetComponent } from './components/active-widget/active-widget.component';
 import { SectionComponent } from './components/active-widget/section/section.component';
 import { InputComponent } from './components/active-widget/input/input.component';
+import { CurrencyPrecisionDirective } from './directives/currency-precision.directive';
+import { CurrencyPipe } from './pipes/currency.pipe';
 
 @NgModule({
     declarations: [
@@ -18,7 +20,9 @@ import { InputComponent } from './components/active-widget/input/input.component
         WidgetComponent,
         ActiveWidgetComponent,
         SectionComponent,
-        InputComponent
+        InputComponent,
+        CurrencyPrecisionDirective,
+        CurrencyPipe
     ],
     imports: [
         BrowserModule,
@@ -26,7 +30,7 @@ import { InputComponent } from './components/active-widget/input/input.component
         HttpClientModule,
         ReactiveFormsModule
     ],
-    providers: [],
+    providers: [CurrencyPipe],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

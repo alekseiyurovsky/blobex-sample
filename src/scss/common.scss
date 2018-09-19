@@ -8,20 +8,38 @@ body {
   background-color: $bg-color;
   position: relative;
   min-height: 100vh;
+  font-family: "open-sans", sans-serif, Arial;
   margin: 0;
 }
 
 .input {
   vertical-align: middle;
-  margin-left: 15px;
   padding-left: 15px;
-  height: 35px;
-  border: solid 1px #aaaaaa;
+  width: 225px;
+  height: 45px;
+  border: solid 1px $border-color-input;
   border-radius: 3px;
+  font-family: "open-sans-light", sans-serif, Arial;
+  font-size: 16px;
 
   &:focus {
     outline: none;
   }
+
+  &.required {
+
+    &.ng-touched {
+
+      &.ng-valid {
+        border-left: 3px solid $border-color-valid;
+      }
+
+      &.ng-invalid {
+        border-left: 3px solid $border-color-error;
+      }
+    }
+  }
+
 }
 
 .btn {

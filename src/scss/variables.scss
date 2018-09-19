@@ -14,7 +14,7 @@ $desktop-small-min: $tablet+1;
 //====== Backgrounds =========
 
 $bg-color: #0c6877;
-$bg-color-form: #fafafa;
+$bg-color-form: #ffffff;
 $bg-color-section: #F2F7F4;
 $bg-color-btn: #00882d;
 $bg-color-btn-disabled: #333333;
@@ -25,9 +25,13 @@ $bg-color-btn-disabled: #333333;
 $text-color-white: #ffffff;
 $text-color-green: #0A9950;
 $text-color-red: #EF637C;
+$text-color-gray: #7B7B7B;
 
-//============ Backgrounds =========
+//============ Borders =========
 
 $border-color-grey: #bbbbbb;
+$border-color-valid: #0A9950;
+$border-color-error: #EF637C;
+$border-color-input: #cfcfcf;
 
 

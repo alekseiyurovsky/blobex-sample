@@ -4,7 +4,15 @@
 
 .content {
   width: 100%;
-  max-width: $tablet-min;
+  max-width: $mobile-large;
   margin: 100px auto 0;
   text-align: center;
+}
+
+
+@include mobile-large {
+
+  .content {
+    margin: 0;
+  }
 }

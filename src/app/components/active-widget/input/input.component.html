@@ -1,12 +1,33 @@
-<div [ngSwitch]="sectionInput.type"
+<div class="input-block"
+     [ngSwitch]="sectionInput.type"
      [formGroup]="form">
 
-    <input *ngSwitchCase="'input'"
-           [formControlName]="sectionIndex+'-'+inputIndex+'-'+sectionInput.type"/>
+    <label *ngSwitchCase="'input'"
+           class="input-label">
+
+        <div class="input-label-text">{{sectionInput.label}}</div>
+
+        <input class="input"
+               [ngClass]="{'required' : form.controls[name].validator}"
+               [formControlName]="name"/>
+
+    </label>
+
+    <label *ngSwitchCase="'currency'"
+           class="input-label">
+
+        <div class="input-label-text">{{sectionInput.label}}</div>
+
+        <div class="input-currency-sign">{{sectionInput.symbol}}</div>
+
+        <input *ngSwitchCase="'currency'"
+               [ngClass]="{'required' : form.controls[name].validator}"
+               class="input currency"
+               appCurrencyPrecision
+               [formControlName]="name"/>
 
 
-    <input *ngSwitchCase="'currency'"
-           [formControlName]="sectionIndex+'-'+inputIndex+'-'+sectionInput.type"/>
+    </label>
 
 
     <div *ngSwitchDefault>
