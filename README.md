@@ -1,8 +1,6 @@
 # BlobexSample
 
-git clone https://github.com/alekseiyurovsky/blobex-sample.git
-cd blobex-sample
-npm i
+git clone https://github.com/alekseiyurovsky/blobex-sample.git && cd blobex-sample && npm i
 
 # Starting App
 
