@@ -2,7 +2,9 @@
 @import "src/scss/variables";
 
 .widget {
+  float: left;
   display: inline-block;
+  padding: 25px 5px 0 5px;
 
   &-icon {
     margin: 0 auto;

@@ -8,7 +8,7 @@
         <div class="widget-header">
             <div class="widget-header-text red" (click)="cancel()">Cancel</div>
             <div class="widget-header-text title">{{widget.name}}</div>
-            <div class="widget-header-text" (click)="save()">Save</div>
+            <div class="widget-header-text" (click)="save(form)">Save</div>
         </div>
 
         <div *ngFor="let section of widget.items; let sectionIndex = index">

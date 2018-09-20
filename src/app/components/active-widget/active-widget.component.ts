@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {DataService} from "../../services/data/data.service";
 import {Widget} from "../../widget";
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import {forEach} from "@angular/router/src/utils/collection";
-
 
 
 @Component({
@@ -23,33 +21,35 @@ export class ActiveWidgetComponent implements OnInit {
     ngOnInit() {
         this.data.activeWidget.subscribe(
             data => {
-                this.widget = data;
+                if (data) {
+                    this.widget = data;
 
-                let formGroup: any = {};
+                    let formGroup: any = {};
 
-                data.items.forEach((section, sectionIndex) => {
+                    data.items.forEach((section, sectionIndex) => {
 
-                    section.items.forEach((inputItem, inputIndex) => {
+                        section.items.forEach((inputItem, inputIndex) => {
 
-                        if (inputItem.required) {
-                            formGroup[`${sectionIndex}-${inputIndex}-${inputItem.type}`] = new FormControl(inputItem.value, Validators.required);
-                        } else {
-                            formGroup[`${sectionIndex}-${inputIndex}-${inputItem.type}`] = new FormControl(inputItem.value);
-                        }
-                    })
-                });
+                            if (inputItem.required) {
+                                formGroup[`${sectionIndex}-${inputIndex}-${inputItem.type}`] = new FormControl(inputItem.value, Validators.required);
+                            } else {
+                                formGroup[`${sectionIndex}-${inputIndex}-${inputItem.type}`] = new FormControl(inputItem.value);
+                            }
+                        })
+                    });
 
-                this.form = new FormGroup(formGroup);
+                    this.form = new FormGroup(formGroup);
+                }
             }
         );
     }
 
-    cancel(){
+    cancel(): void{
         this.data.appState.next('widgets');
     }
 
-    save(){
-        // Save changes logic here
+    save(form: FormGroup): void{
+        // Save changes or submit form logic here
     }
 
 }
